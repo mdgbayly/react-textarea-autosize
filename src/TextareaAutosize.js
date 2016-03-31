@@ -9,53 +9,6 @@ const emptyFunction = function() {};
 
 export default class TextareaAutosize extends React.Component {
 
-  static propTypes = {
-    /**
-     * Current textarea value.
-     */
-    value: React.PropTypes.string,
-
-    /**
-     * Callback on value change.
-     */
-    onChange: React.PropTypes.func,
-
-    /**
-     * Callback on height changes.
-     */
-    onHeightChange: React.PropTypes.func,
-
-    /**
-     * Try to cache DOM measurements performed by component so that we don't
-     * touch DOM when it's not needed.
-     *
-     * This optimization doesn't work if we dynamically style <textarea />
-     * component.
-     */
-    useCacheForDOMMeasurements: React.PropTypes.bool,
-
-    /**
-     * Minimal numbder of rows to show.
-     */
-    rows: React.PropTypes.number,
-
-    /**
-     * Alias for `rows`.
-     */
-    minRows: React.PropTypes.number,
-
-    /**
-     * Maximum number of rows to show.
-     */
-    maxRows: React.PropTypes.number
-  }
-
-  static defaultProps = {
-    onChange: emptyFunction,
-    onHeightChange: emptyFunction,
-    useCacheForDOMMeasurements: false
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -208,6 +161,52 @@ export default class TextareaAutosize extends React.Component {
 }
 
 TextareaAutosize.displayName = 'TextareaAutosize';
+TextareaAutosize.propTypes = {
+  /**
+   * Current textarea value.
+   */
+  value: React.PropTypes.string,
+
+  /**
+   * Callback on value change.
+   */
+  onChange: React.PropTypes.func,
+
+  /**
+   * Callback on height changes.
+   */
+  onHeightChange: React.PropTypes.func,
+
+  /**
+   * Try to cache DOM measurements performed by component so that we don't
+   * touch DOM when it's not needed.
+   *
+   * This optimization doesn't work if we dynamically style <textarea />
+   * component.
+   */
+  useCacheForDOMMeasurements: React.PropTypes.bool,
+
+  /**
+   * Minimal numbder of rows to show.
+   */
+  rows: React.PropTypes.number,
+
+  /**
+   * Alias for `rows`.
+   */
+  minRows: React.PropTypes.number,
+
+  /**
+   * Maximum number of rows to show.
+   */
+  maxRows: React.PropTypes.number
+}
+
+TextareaAutosize.defaultProps = {
+  onChange: emptyFunction,
+  onHeightChange: emptyFunction,
+  useCacheForDOMMeasurements: false
+}
 
 function onNextFrame(cb) {
   if (window.requestAnimationFrame) {
