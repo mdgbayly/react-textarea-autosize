@@ -207,6 +207,8 @@ export default class TextareaAutosize extends React.Component {
 
 }
 
+TextareaAutosize.displayName = 'TextareaAutosize';
+
 function onNextFrame(cb) {
   if (window.requestAnimationFrame) {
     return window.requestAnimationFrame(cb);
