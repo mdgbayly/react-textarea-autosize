@@ -1,7 +1,7 @@
 {
   "name": "@mdgbayly/react-textarea-autosize",
   "description": "textarea component for React which grows with content",
-  "version": "3.3.2",
+  "version": "3.3.3",
   "author": {
     "name": "Andrey Popp",
     "email": "8mayday@gmail.com",
@@ -21,7 +21,7 @@
   "license": "MIT",
   "main": "lib/TextareaAutosize.js",
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "^0.14.0 || ^15.0.0"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "babel-plugin-transform-object-assign": "^6.3.13",
     "babel-plugin-transform-object-rest-spread": "^6.5.0",
     "babel-preset-react": "^6.3.13",
-    "react": "^0.14.0"
+    "react": "^15.0.0"
   },
   "dependencies": {}
 }
